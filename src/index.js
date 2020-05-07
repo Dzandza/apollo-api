@@ -6,6 +6,7 @@ import "./config/env";
 import dataSources from "./dataSources";
 
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 5000;
+const NODE_ENV = process.env.NODE_ENV ? process.env.NODE_ENV : "development";
 
 const startServer = async () => {
   const apolloServer = new ApolloServer({
@@ -18,7 +19,7 @@ const startServer = async () => {
     },
   });
 
-  if (process.env.NODE_ENV !== "test") {
+  if (NODE_ENV !== "test") {
     await createConnection(dbConfig.development);
     apolloServer.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
   }

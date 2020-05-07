@@ -29,6 +29,8 @@ const GET_CLIENTS = gql`
 `;
 
 beforeAll(async () => {
+
+  //different database can be used
   await createConnection(dbConfig.development);
 });
 
@@ -40,6 +42,12 @@ describe("Queries", () => {
   it("fetches all clients", async () => {
     const { query } = createTestClient(apolloServer);
     const res = await query({ query: GET_CLIENTS });
+
+
+    //snapshot can be defined
+    //expect(res).toMatchSnapshot();
+
+    //example tests
     expect(res.data).not.toBeNull();
     expect(res.data.clients).toBeDefined();
     expect(res.data.clients).not.toBeNull();
