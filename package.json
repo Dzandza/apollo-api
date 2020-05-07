@@ -1,0 +1,39 @@
+{
+  "name": "apollo-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js --exec babel-node",
+    "check-types": "tsc",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.13.0",
+    "apollo-server-testing": "^2.13.0",
+    "dataloader": "^2.0.0",
+    "dotenv": "^8.2.0",
+    "graphql-iso-date": "^3.6.1",
+    "graphql-tag": "^2.10.3",
+    "jest": "^26.0.1",
+    "lodash": "^4.17.15",
+    "pg": "^8.0.3",
+    "typeorm": "^0.2.24"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "@babel/runtime": "^7.9.6",
+    "nodemon": "^2.0.3",
+    "typescript": "^3.8.3"
+  }
+}
